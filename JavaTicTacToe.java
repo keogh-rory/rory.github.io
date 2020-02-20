@@ -118,18 +118,13 @@ public static void comLoop(boolean comPos[][], boolean pos [][], char board [][]
     if (winningMove(playerPos, pos)){ //checking if the player can win on the next turn (defense is priority)
         comRow = move[0];
         comCol = move[1];
-        System.out.println("blocked ");
     }
 
     if (winningMove(comPos, pos)){ //checking if the computer can win on the next turn
         comRow = move[0];
         comCol = move[1];
-        System.out.println("Win!! ");
     }
 
-
-    
-    //System.out.println("comRow: " + comRow + " comCol: " + comCol);
 
     if (!(isOccupied(pos, comRow, comCol))) {
         pos[comRow][comCol] = true;
